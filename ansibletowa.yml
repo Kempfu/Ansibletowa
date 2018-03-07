@@ -18,3 +18,9 @@
     copy:
       dest: /var/www/html/index.html
       content: "Hello World G2 en force"
+  - name: config firewalld
+    firewalld:
+      service: http
+      permanent: true
+      immediate: true
+      state: enabled
